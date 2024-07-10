@@ -62,21 +62,60 @@ nav li a{
     margin-top: 20px;
     width: 100%;
 }
+/* main styles */
+main{
+    max-width: 1440px;
+    margin: 70px auto;
+}
+.team-container{
+    display: flex;
+    align-items: center;
+}
+.team-img{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    gap: 1.5 rem;
+}
+.team-content{
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.team-titel{
+    font-size: 2.8rem;
+}
+.team-titel .quick-list{
+    color: #727272;
+    font-weight: 500;
+}
+.team-titel .text-feature{
+    color: #FF900E ;
+    font-weight: 700;
+}
 
 @media screen and (max-width : 576px){
     header{
         padding: 20px;
     }
-    nav{
+    nav, .team-container{
         flex-direction: column;
     }
+    .team-img{
+        grid-template-columns:  1fr;
+    }
+    .team-content{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
 }
+
+
 
 @media screen and (min-width: 576px) and (max-width : 960px){
     header{
         padding: 50px;
     }
-    nav{
+    nav .team-container{
         flex-direction: column;
     }
 }
+
